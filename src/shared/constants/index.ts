@@ -1,2 +1,2 @@
-export {} from './headerNavValue'
-export {OrganizerProfileValue} from './oraganizerProfileValue'
+export { HeaderNavArray } from './headerNavValue'
+export { OrganizerProfileValue } from './oraganizerProfileValue'

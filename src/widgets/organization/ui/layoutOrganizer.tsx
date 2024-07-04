@@ -1,13 +1,21 @@
 import Image from 'next/image'
+import { ReactNode } from 'react'
 import { OtherBlock } from '~/entities'
-import { LocationIcon } from '~/shared/assets/icons'
 import image from '~/shared/assets/icons/graph/graph.jpg'
 import gerb from '~/shared/assets/images/gerb.png'
 import subscruct from '~/shared/assets/images/Subtract.png'
 import { OrganizerProfileValue } from '~/shared/constants'
 import { OrganizerProfile, Rating } from '~/shared/ui'
 
-export const LayoutOrganizer = () => {
+export type OrganizationLayoutType = {
+	actions?: ReactNode
+	organizationSports?: ReactNode
+	medalsRating?: ReactNode
+}
+export const LayoutOrganizer = ({
+	organizationSports,
+	medalsRating
+}: OrganizationLayoutType) => {
 	return (
 		<>
 			<div className=''>
@@ -18,24 +26,22 @@ export const LayoutOrganizer = () => {
 						<Rating up={true} numberRating={1} />
 					</div>
 					<div className='bg-white pt-[102px] px-5'>
-						<div className=''>
+						<div className='flex flex-col gap-[15px]'>
 							<div className='text-[30px] flex items-center gap-2'>
 								<h1>Спортивная Организация Алтайского Края</h1>
 								<div className=''>
 									<Image src={subscruct} alt={'galochka'} />
 								</div>
 							</div>
+							{organizationSports}
+							{medalsRating}
 						</div>
-						<div className=''>
-							<div className=''>
-								<LocationIcon />
-								<h6></h6>
-							</div>
-						</div>
+						<div className=''></div>
 						<div className=''></div>
 					</div>
 				</section>
 			</div>
+
 			<div className='flex flex-col gap-6'>
 				<OtherBlock
 					title='Организации'

@@ -5,9 +5,9 @@ export default function Home() {
 		<>
 			<Header />
 			<div className='mt-20 m-auto  max-w-[1160px]'>
-				<main className='flex  gap-6 justify-between'>
+				<div className='flex gap-6 justify-between'>
 					<Organization />
-				</main>
+				</div>
 			</div>
 		</>
 	)

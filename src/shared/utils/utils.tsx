@@ -1,4 +1,3 @@
-'use client'
 import { Children, createElement, isValidElement } from 'react'
 import { ProviderType } from '../types'
 

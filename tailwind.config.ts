@@ -19,7 +19,8 @@ const config: Config = {
 			},
 			borderRadius: {
 				default: '20px',
-				medium: '12px'
+				medium: '12px',
+				small: '8px'
 			}
 		}
 	},
