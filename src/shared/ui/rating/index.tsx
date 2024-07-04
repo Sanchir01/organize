@@ -7,7 +7,7 @@ export type RatingType = {
 
 export const Rating = ({ up, numberRating }: RatingType) => {
 	return (
-		<div className='bg-bg-grey flex gap-2'>
+		<div className='bg-bg-grey flex gap-2 px-3 py-[7px] rounded-medium'>
 			{up ? <UpArrow /> : ''}
 			<span>№{numberRating}</span>
 		</div>
