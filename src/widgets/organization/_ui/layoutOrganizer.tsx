@@ -8,13 +8,16 @@ import { OrganizerProfileValue } from '~/shared/constants'
 import { OrganizerProfile, Rating } from '~/shared/ui'
 
 export type OrganizationLayoutType = {
-	actions?: ReactNode
+	organizationsActions?: ReactNode
 	organizationSports?: ReactNode
 	medalsRating?: ReactNode
+	organizationTabs?: ReactNode
 }
 export const LayoutOrganizer = ({
 	organizationSports,
-	medalsRating
+	medalsRating,
+	organizationsActions,
+	organizationTabs
 }: OrganizationLayoutType) => {
 	return (
 		<>
@@ -25,7 +28,7 @@ export const LayoutOrganizer = ({
 					<div className='absolute right-3 top-40'>
 						<Rating up={true} numberRating={1} />
 					</div>
-					<div className='bg-white pt-[102px] px-5'>
+					<div className='flex flex-col gap-10 bg-white pt-[102px] px-5 rounded-b-default'>
 						<div className='flex flex-col gap-[15px]'>
 							<div className='text-[30px] flex items-center gap-2'>
 								<h1>Спортивная Организация Алтайского Края</h1>
@@ -34,10 +37,10 @@ export const LayoutOrganizer = ({
 								</div>
 							</div>
 							{organizationSports}
-							{medalsRating}
+							<div className='pt-[13px]'>{medalsRating}</div>
 						</div>
-						<div className=''></div>
-						<div className=''></div>
+						<div className=''>{organizationsActions}</div>
+						<div className=''>{organizationTabs}</div>
 					</div>
 				</section>
 			</div>

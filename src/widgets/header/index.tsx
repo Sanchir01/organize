@@ -1,8 +1,8 @@
-import { ProfileAndAlerts } from './ui/alerts'
-import { HeaderNav } from './ui/headerNav'
-import { HeaderLanguage } from './ui/language'
-import { LayoutHeader } from './ui/layoutHeader'
-import { Logo } from './ui/logo'
+import { ProfileAndAlerts } from './_ui/alerts'
+import { HeaderNav } from './_ui/headerNav'
+import { HeaderLanguage } from './_ui/language'
+import { LayoutHeader } from './_ui/layoutHeader'
+import { Logo } from './_ui/logo'
 
 export const Header = () => {
 	return (

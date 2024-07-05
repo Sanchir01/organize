@@ -1,34 +1,10 @@
-import { LayoutOrganizer } from './ui/layoutOrganizer'
-import {
-	EnumPlaceTournament,
-	OrganizationsMedals,
-	OrganizationsMedalsType
-} from './ui/medals'
-import {
-	OrganizationSports,
-	OrganizationSportsType
-} from './ui/organizationSports'
+import { MedalsArray, OrganizationSportsArray } from '~/shared/constants'
+import { OrganizationsActions } from './_ui/actions'
+import { LayoutOrganizer } from './_ui/layoutOrganizer'
+import { OrganizationsMedals } from './_ui/medals'
+import { OrganizationSports } from './_ui/organizationSports'
+import { OrganizationTabs } from './_ui/organizationTabs'
 
-const OrganizationSportsArray: OrganizationSportsType[] = [
-	{ name: 'Алтайский край', href: './test' },
-	{ name: 'Грэпплинг', href: './test' },
-	{ name: 'Греко-римская борьба', href: './test' },
-	{ name: 'Пляжная борьба', href: './test' }
-]
-export const MedalsArray: OrganizationsMedalsType[] = [
-	{
-		value: 12,
-		place: EnumPlaceTournament.GOLD
-	},
-	{
-		value: 4,
-		place: EnumPlaceTournament.SILVER
-	},
-	{
-		value: 19,
-		place: EnumPlaceTournament.BRONZE
-	}
-]
 export const Organization = () => {
 	return (
 		<LayoutOrganizer
@@ -36,6 +12,8 @@ export const Organization = () => {
 				<OrganizationSports sports={OrganizationSportsArray} />
 			}
 			medalsRating={<OrganizationsMedals medalsArray={MedalsArray} />}
+			organizationsActions={<OrganizationsActions />}
+			organizationTabs={<OrganizationTabs />}
 		/>
 	)
 }

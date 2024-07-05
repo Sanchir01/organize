@@ -15,11 +15,27 @@ const config: Config = {
 			},
 			colors: {
 				'bg-grey': '#f8f8f9',
-				greyText: '#7b7ea5'
+				greyText: '#7b7ea5',
+
+				button: {
+					primary: {
+						default: '#06082c',
+						hover: '#353754',
+						active: '#03051c',
+						disable: '#cccfda'
+					},
+					secondary: {
+						default: '#eef0f7',
+						hover: '#f8f8f9',
+						active: '#cccfda',
+						disable: '#eef0f7'
+					}
+				}
 			},
 			borderRadius: {
 				default: '20px',
 				medium: '12px',
+				'pre-small': '10px',
 				small: '8px'
 			}
 		}

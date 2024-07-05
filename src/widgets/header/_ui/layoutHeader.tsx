@@ -14,9 +14,9 @@ export const LayoutHeader = ({
 	HeaderProfileAndAlerts
 }: LayoutHeaderType) => {
 	return (
-		<header className='h-16 bg-white'>
+		<header className='h-16 bg-white sticky top-0 backdrop-blur w-full z-50'>
 			<Container sx={{ px: 8, py: 2 }}>
-				<div className='flex gap-[30px] items-center'>
+				<div className='flex gap-[30px] items-center lg:hidden'>
 					{Logo}
 					{HeaderNav}
 					{HeaderLanguage}

@@ -6,14 +6,11 @@ import {
 import {
 	EnumPlaceTournament,
 	OrganizationsMedalsType
-} from '~/widgets/organization/ui/medals'
+} from '~/widgets/organization/_ui/medals'
 
 export const SingleMedal = ({ place, value }: OrganizationsMedalsType) => {
 	return (
-		<div
-			
-			className='flex items-center  bg-bg-grey gap-2 p-[10px] rounded-small'
-		>
+		<div className='flex items-center  bg-bg-grey gap-2 p-[10px] rounded-small'>
 			{place === EnumPlaceTournament.GOLD && <GoldMedalIcon />}
 			{place === EnumPlaceTournament.SILVER && <SilverMedalIcon />}
 			{place === EnumPlaceTournament.BRONZE && <BronzeMedalIcon />}
